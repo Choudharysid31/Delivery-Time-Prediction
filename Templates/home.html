@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftArrive Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #1f0210;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .header {
+            width: 100%;
+            background-color: rgba(57, 16, 16, 0.96);
+            padding: 10px;
+            text-align: center;
+
+        }
+        .sub{
+            text-align: center;
+            background-color: rgba(57, 16, 16, 0.96);
+            width: 100%;
+            height: 30px;
+            border-radius: 0 0 150px 200px ;
+            margin-bottom: 10px;
+            color: antiquewhite;
+            box-shadow:0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+        .header h1 {
+            color: white;
+            font-size: 48px;
+            margin: 0;
+            letter-spacing: 3px;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .heading {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color:rgba(57, 16, 16, 0.96);
+            color: #fff;
+            text-decoration: none;
+            box-shadow: -4px 5px 10px rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: rgba(26, 2, 2, 0.96);
+        }
+
+        .footer {
+            width: 100%;
+            background-color: rgba(66, 16, 16, 0.5);
+            padding: 10px;
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <br>
+        <h1>SWIFTARRIVE</h1>
+    </div>
+    <div class="sub"></div>
+    <div class="container">
+        <b><h2 class="heading">Welcome to the World Of Delivery Optimization</h2>
+        <p>Want to know more about the product?</p></b>
+        <div class="button-container">
+            <a class="button" href="{{ url_for('about') }}">DASHBOARD</a>
+        </div>
+        <br>
+        <br>
+
+
+        <b><p>Want to try the model with manual inputs?</p></b>
+        <div class="button-container">
+            <a class="button" href="{{ url_for('index') }}">PREDICTION</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 SwiftArrive. All rights reserved.
+    </div>
+
+    <script>
+        // Fade in animation for the footer
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".footer").style.animation = "fadeIn 1s ease-in-out forwards";
+        });
+    </script>
+</body>
+</html>

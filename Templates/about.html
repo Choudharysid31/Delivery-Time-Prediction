@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image:"{{ url_for('static' , filename='maximalfocus-HakTxidk36I-unsplash.jpg') }}";
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            opacity: 0.9; /* Adjust the opacity for a slightly transparent background */
+        }
+
+        /* Main header styles */
+        header {
+            background-color: rgb(57, 16, 16); /* Adjust the background color for the header */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 98%;
+            margin-bottom: 20px;
+            z-index: 999; /* Ensure the header is on top of other elements */
+        }
+
+        a {
+            color: #090152; /* Change color as desired */
+        }
+
+        /* Header button styles */
+        .button {
+            background-color: rgb(239, 187, 121);
+            display: inline-block;
+            padding: 10px 20px;
+            color: #000000;
+            text-decoration: none;
+            box-shadow: -4px 5px 10px rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .button:hover {
+            background-color: rgb(86, 46, 3);
+        }
+
+
+
+        /* About section styles */
+        .about-section {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the background color for the about section */
+            padding: 20px;
+            margin-top: 500px; /* Ensure content is visible below the fixed header */
+            border-radius: 10px;
+            width: 70%;
+            height: 80%;
+            margin: auto;
+            text-align: justify;
+            line-height: 1.5;
+        }
+
+        /* Header h1 styles */
+        h1 {
+            color: #feefef;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        /* About section h2 styles */
+        h2 {
+            color: rgb(86, 46, 3);
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        /* About section paragraph styles */
+        p {
+            color: #000000;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* Adjust the width to display two graphs side by side */
+    .graph-container {
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    }
+
+    /* Adjust the width of each graph container */
+    .graph-container .graph-image {
+        width: 48%; /* Adjust the width as needed */
+    }
+
+    /* Adjust the width of the text boxes below the graphs */
+    .graph-container .text-box {
+        width: 48%; /* Adjust the width as needed */
+        margin-top: 10px;
+    }
+        footer {
+            width: 100%;
+            background-color: rgba(66, 16, 16, 0.5);
+            text-align: center;
+            margin-top: auto;
+        }
+    </style>
+
+
+
+</head>
+<body background="static/image/maximalfocus-HakTxidk36I-unsplash.jpg">
+
+
+<header>
+    <div class="header-left">
+        <h1>DASHBOARD</h1>
+    </div>
+    <div class="header-right">
+        <a class="button" href="{{ url_for('index') }}">Prediction</a>
+        <a class="button" href="{{ url_for('home') }}">Return</a>
+    </div>
+</header>
+<main>
+    <section class="about-section">
+        <br><br><br>
+        <h2>Let's Have Some Insights</h2>
+        <p>Welcome to our cutting-edge delivery time predictor, designed to revolutionize the efficiency and reliability of delivery services. Leveraging advanced data science techniques and a meticulous process, our platform ensures accurate estimations of delivery times, empowering businesses to optimize their logistics operations and enhance customer satisfaction.</p>
+
+        <p>1. Collection of Datasets through Multiple Sources and Resources:
+            We gather comprehensive datasets from various reliable sources and platforms, encompassing a wide range of variables that influence delivery times. These datasets are meticulously curated to ensure relevance and accuracy, providing a robust foundation for our predictive model.</p>
+
+        <p>2. Data Cleaning And Preprocessing:
+            Upon collection, our team employs rigorous data cleaning and preprocessing techniques to eliminate inconsistencies, errors, and missing values. This critical step ensures that the data used for analysis is of the highest quality, minimizing noise and enhancing the accuracy of predictions.</p>
+
+        <p>3. Exploratory Data Analysis (EDA):
+            Our experts conduct thorough exploratory data analysis, delving deep into the datasets to uncover meaningful insights and patterns. Through visualization and statistical analysis, we gain a comprehensive understanding of the factors impacting delivery times, guiding subsequent steps in the predictive modeling process.</p>
+
+        <p>4. Feature Engineering:
+            Feature engineering plays a pivotal role in enhancing the predictive power of our model. Our team identifies and engineers relevant features from the raw data, transforming them into meaningful predictors that capture the nuances of delivery time dynamics. This process involves both domain expertise and advanced statistical techniques to extract valuable information.</p>
+
+        <p>5. Model Selection:
+            We employ a systematic approach to model selection, evaluating a diverse range of algorithms to identify the most suitable candidate for our delivery time prediction task. Our selection criteria prioritize accuracy, scalability, and interpretability, ensuring that the chosen model meets the unique requirements of our users.</p>
+
+        <p>6. Model Training:
+            With the selected model in place, we embark on the training phase, utilizing robust datasets to train the model on historical delivery data. Through iterative refinement and optimization, we fine-tune the model parameters to maximize predictive performance, taking into account factors such as seasonality, geographic variations, and logistical constraints.</p>
+
+        <p>7. Model Deployment in Love Website:
+            Once trained and validated, our delivery time predictor is seamlessly integrated into the Love website, providing users with real-time estimates and recommendations. Through a user-friendly interface, businesses can access actionable insights to streamline their delivery operations and meet customer expectations with precision and efficiency.</p>
+
+        <p>In essence, our delivery time predictor represents the culmination of advanced data science methodologies and industry expertise, empowering businesses to navigate the complexities of modern logistics with confidence and agility. Join us in revolutionizing the future of delivery services, one prediction at a time.</p>
+
+        <!-- Graphs with labels -->
+        <div class="graph-container">
+            <img src="static/image/newplot (1).png" alt="Graph 1" class="graph-image" height="170px">
+            <div class="text-box">Shows how the delivery time grows as the final cost of the order increases.</div>
+        </div>
+
+        <div class="graph-container">
+            <img src="static/image/newplot.png" alt="Graph 2" class="graph-image" height="200px" width="500px">
+            <div class="text-box">Shows the Delivery time is effected by Number of Delivery Partners.</div>
+        </div>
+        <div class="graph-container">
+            <img src="static/image/newplot (2).png" alt="Graph 2" class="graph-image" width=60%>
+            <div class="text-box">Shows the Delivery time by order protocol.</div>
+        </div>
+
+        <div class="graph-container">
+            <img src="static/image/Screenshot 2024-04-01 234606.png" alt="Graph 3" class="graph-image">
+            <div class="text-box">Explains how the delivery time increases with large amounts of outstanding orders.</div>
+        </div>
+
+        <div class="graph-container">
+            <img src="static/image/Screenshot 2024-04-01 234645.png" alt="Graph 4" class="graph-image">
+            <div class="text-box">Showcases the frequency of delivery time being more than the average delivery times.</div>
+        </div>
+
+        <div class="graph-container">
+            <img src="static/image/Screenshot 2024-04-01 234754.png" alt="Graph 5" class="graph-image">
+            <div class="text-box">Explains how the delivery time increases with the number of orders.</div>
+        </div>
+
+        <div class="graph-container">
+            <img src="static/image/Screenshot 2024-04-01 234830.png" alt="Graph 6" class="graph-image">
+            <div class="text-box">Shows how variation in number of order items effects the delivery time.</div>
+        </div>
+
+        <div class="graph-container">
+            <img src="static/image/Screenshot 2024-04-01 235423.png" alt="Graph 7" class="graph-image">
+            <div class="text-box">Heat map that explains the correlation matrix of labels.</div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 SwiftArrive. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
